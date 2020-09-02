@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overlook 
+Mod 2 Final Solo Project
 
-## Available Scripts
+- [Leigh Larson](https://github.com/leighlars)
+<!-- - [Repo](https://github.com/leighlars/overlook-solo) -->
+- [Project Board](https://github.com/leighlars/overlook-solo/projects)
+- [Project Spec](https://frontend.turing.io/projects/overlook.html)
+<!-- - [Deployed Pages](https://leighlars.github.io/overlook-solo/) -->
 
-In the project directory, you can run:
+## Abstract 
 
-### `npm start`
+The project asks the developer to design a functionally effective, sensible, and aesthetically pleasing UX/UI hotel management tool. The user can log in as a manager or as a guest. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The manager can: </br>
+View percentage and number of rooms available, today's total revenue. </br>
+View guests' names, a list of all of their bookings, and the total amount they’ve spent </br>
+Add a room booking for that user </br>
+Delete any upcoming room bookings for that user (they cannot delete a booking from the past)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The guest can:</br>
+Select date to book a room </br>
+Upon selecting a date, user should be shown a list of room details for only rooms that are available on that date </br>
+Filter the list of available rooms by their roomType property </br>
+Select a room for booking </br>
+View an apology notice and prompt to select new date in the event rooms are unavailable on chosen date </br>
+View any room bookings (past or present) </br>
+The total amount they have spent on rooms </br>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Technologies / Systems
+- React 
+- Javascript ES6
+- TDD with Jest
+- VSCode 
+- git / Version control
+- Accessibility 
+- SCSS / SASS
+- API Fetch/Post
+- Webpack
