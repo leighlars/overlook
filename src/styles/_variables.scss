@@ -6,4 +6,19 @@
   font-size: $font-size;
   text-align: center;
   color: white;
+
+}
+
+@mixin textFont($fontSize) {
+  font-family: 'Josefin', sans-serif;
+  font-size: $font-size;
+  text-align: center;
+  color: white;
+}
+
+@mixin columnDisplay() {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,6 +1,33 @@
 @import '../styles/_variables.scss';
 
+
 header {
-  @include headerFont(3em);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.header-logo {
+  @include headerFont(4em);
+  margin: 0px;
   text-align: center;
+}
+
+.nav-btns {
+  @include columnDisplay();
+}
+
+
+.nav-btn {
+  color: white;
+  background-color: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 3px;
+  &:hover {
+      background-color: grey;
+    }
 }

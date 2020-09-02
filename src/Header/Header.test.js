@@ -7,6 +7,8 @@ describe('Header', () => {
   beforeEach(() => {
     render(<Header />)
   })
+
+  
   it('should render The Overlook logo', () => {
     const logo = screen.getByText('The Overlook')
     expect(logo).toBeInTheDocument()
