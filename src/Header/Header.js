@@ -11,8 +11,14 @@ const Header = ({isLoggedIn, user,}) => {
      <NavLink to="/" className="nav-btn home">
       Home
      </NavLink>
-     <NavLink to="/login" className="nav-btn login">
+     <NavLink to="/login" className={isLoggedIn ? "hidden" : "nav-btn login"}>
       Login
+     </NavLink>
+     <NavLink to="/" className={isLoggedIn ? "nav-btn logout" : 'hidden'}>
+      Logout
+     </NavLink>
+     <NavLink to="/user-home" className={isLoggedIn ? "nav-btn user profile" : 'hidden'}>
+      My Profile
      </NavLink>
     </div>
    </header>
@@ -22,3 +28,7 @@ const Header = ({isLoggedIn, user,}) => {
 
 
 export default Header
+
+Header.propTypes = {
+  isLoggedIn: PropTypes.bool
+}
