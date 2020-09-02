@@ -3,7 +3,7 @@ import './Header.scss'
 import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types'
 
-const Header = ({isLoggedIn, user,}) => {
+const Header = ({isLoggedIn}) => {
   return (
    <header>
     <h1 className="header-logo">The Overlook</h1>
