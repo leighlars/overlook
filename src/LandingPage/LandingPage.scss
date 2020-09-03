@@ -7,13 +7,15 @@
   justify-content: center;
   width: 70%;
   margin: 0 auto;
+  margin-top: 3em;
+  padding: 1%;
   .landing-greeting {
     @include headerFont(2.5em);
-    margin: 1em;
+    margin: .25em;
   }
   .welcome-text {
     @include textFont(1.75em);
     text-align: center;
-    margin-top: 0px;
+    margin: 0px;
   }
 }

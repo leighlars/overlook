@@ -4,9 +4,13 @@
   @include rowDisplay();
   width: 90%;
   overflow: scroll;
+  margin: 10px auto;
 }
 
 .hotel-image {
   width: 15em;
+  height: 13em;
+  opacity: .6;
+  margin-right: 5px;
 }
 
