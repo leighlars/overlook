@@ -22,6 +22,7 @@
 
 .hotel-images {
   @include rowDisplay();
+  justify-content: initial;
   width: 90%;
   overflow: scroll;
   margin: 10px auto;

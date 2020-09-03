@@ -4,7 +4,9 @@ import LandingPage from '../LandingPage/LandingPage'
 
 const Main = ({isLoggedIn}) => {
   return (
-      <LandingPage />
+    <main>
+      {isLoggedIn === false && (<LandingPage />)}
+    </main>
   )
 }
   

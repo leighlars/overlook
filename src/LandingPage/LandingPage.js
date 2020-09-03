@@ -1,6 +1,5 @@
 import React from "react";
 import "./LandingPage.scss";
-// import './HotelImage.scss'
 import bedroom from  "../images/bedroom.JPG";
 import hiddenBed from  "../images/hidden-bed.JPG";
 import lobby from  "../images/lobby.JPG";
