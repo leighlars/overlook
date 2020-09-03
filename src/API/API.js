@@ -15,7 +15,7 @@ class API  {
    allData.bookingsData = data[2];
    return allData;
   });
- },
+ }
 
  getUserData() {
   let userData = fetch(`${this.rootURL}users/users`)
@@ -25,7 +25,7 @@ class API  {
    })
    .catch((err) => console.log(err.message));
   return userData;
- },
+ }
 
  getRoomsData() {
   let roomsData = fetch(`${this.rootURL}rooms/rooms`)
@@ -35,7 +35,7 @@ class API  {
    })
    .catch((err) => console.log(err.message));
   return roomsData;
- },
+ }
 
  getBookingsData() {
   let bookingsData = fetch(`${this.rootURL}bookings/bookings`)
@@ -45,7 +45,7 @@ class API  {
    })
    .catch((err) => console.log(err.message));
   return bookingsData;
- },
+ }
 
  postNewBooking(newBooking) {
   fetch(`${this.rootURL}bookings/bookings`, {
@@ -60,7 +60,7 @@ class API  {
    .catch((error) => {
     console.log("Failed:", error);
    });
- },
+ }
 
  deleteBooking(deletedBooking) {
   fetch(`${this.rootURL}bookings/bookings`, {
@@ -73,7 +73,7 @@ class API  {
     console.log("Success", data);
    })
    .catch((err) => console.log(err));
- },
-};
+ }
+}
 
 export default API
