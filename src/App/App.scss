@@ -1,5 +1,8 @@
 @import '../styles/_variables.scss';
 
+#root, .App {
+  height: 100%;
+}
 
 html, body {
   height: 100%;

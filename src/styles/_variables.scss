@@ -1,26 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+
+$grey: grey;
+$transparentMauve: hsla(258, 17%, 39%, 0.76);
+$opaqueMauve: hsla(297, 13%, 31%, 1.0);
 
 @mixin headerFont($font-size) {
   font-family: 'Satisfy', cursive;
   font-size: $font-size;
   text-align: center;
   color: white;
-
 }
 
-@mixin textFont($fontSize) {
-  font-family: 'Josefin', sans-serif;
+@mixin textFont($font-size) {
+  font-family: 'Cormorant Garamond', serif;
   font-size: $font-size;
   text-align: center;
   color: white;
 }
 
+
+@mixin borders() {
+  background: $transparentMauve;
+  border: 1px solid $grey;
+  border-radius: 6px;
+}
+
 @mixin columnDisplay() {
   display: flex;
-  align-items: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+@mixin rowDisplay() {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {

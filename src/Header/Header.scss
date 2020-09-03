@@ -2,12 +2,10 @@
 
 
 header {
-  display: flex;
-  flex-direction: row;
+  @include rowDisplay();
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
   width: 90%;
+  margin: .75em auto;
 }
 
 .header-logo {
@@ -18,11 +16,11 @@ header {
 }
 
 .nav-btns {
-  @include columnDisplay();
+  @include rowDisplay();
 }
 
-
 .nav-btn {
+  @include textFont(1.25em);
   color: white;
   background-color: transparent;
   border-radius: 4px;
