@@ -1,0 +1,12 @@
+@import '../styles/_variables.scss';
+
+.hotel-images {
+  @include rowDisplay();
+  width: 90%;
+  overflow: scroll;
+}
+
+.hotel-image {
+  width: 15em;
+}
+

@@ -25,8 +25,9 @@ header {
   background-color: transparent;
   border-radius: 4px;
   text-decoration: none;
-  margin: 3px;
+  margin: 5px;
   &:hover {
-      text-shadow: 2px 2px #000;
+      // text-shadow: 2px 2px #000;
+      text-decoration: underline;
     }
 }
