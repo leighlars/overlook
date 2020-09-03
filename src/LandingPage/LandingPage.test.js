@@ -1,12 +1,13 @@
 import React from 'react'
 import LandingPage from './LandingPage'
-import { render, screen, fireEvent } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { render, screen, fireEvent } from "@testing-library/react"
+import { MemoryRouter } from "react-router-dom"
 
 describe('LandingPage', () => {
  beforeEach(() => {
-  render(<MemoryRouter>
-    <LandingPage />
+  render(
+    <MemoryRouter>
+      <LandingPage />
     </MemoryRouter>)
  })
 
