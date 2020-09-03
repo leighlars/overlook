@@ -1,59 +1,79 @@
-const root = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
+const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
 
-  class API {
-   static postData = async (info, id) => {
-    const path = this.findPostPath(info, id);
-    try {
-     const response = await fetch(path, {
-      method: "POST",
-      headers: {
-       "Content-Type": "application/json",
-      },
-      body: JSON.stringify(info),
-     });
-     return response;
-    } catch (error) {
-     return error;
-    }
-   };
+    
+class API  {
 
-   static findPostPath = (info, id) => {
-    const acceptableUserInfo = ["userName", "password"];
-    const infoValues = Object.keys(info);
-    if (infoValues.every((value) => acceptableUserInfo.includes(value))) {
-     return `${root}/users/users`;
-    } else {
-     throw new Error("Something is wrong with the data for POST");
-    }
-   };
+ fetchData() {
+  let userData = this.getUserData();
+  let roomsData = this.getRoomsData();
+  let bookingsData = this.getBookingsData();
 
-   //  static getData = async (location, path) => {
-   //   const pathAndData = this.findRelevantPathAndData(location, id)
-   //   try {
-   //    const response = await fetch(`${root}`/);
+  return Promise.all([userData, roomsData, bookingsData]).then((data) => {
+   let allData = {};
+   allData.userData = data[0];
+   allData.roomsData = data[1];
+   allData.bookingsData = data[2];
+   return allData;
+  });
+ },
 
-   //   } catch (error) {
-   //     return error
-   //   }
-   //  };
+ getUserData() {
+  let userData = fetch(`${this.rootURL}users/users`)
+   .then((response) => response.json())
+   .then((data) => {
+    return data.users;
+   })
+   .catch((err) => console.log(err.message));
+  return userData;
+ },
 
-   //  static findRelevantPathAndData = (location, id) => {
-   //   const pathAndData = { path: "", data: "" };
-   //   if (location === "user") {
-   //    pathAndData.path = `${root}/movies/${id ? id : ""}`;
-   //    pathAndData.data = id ? `movie` : `movies`;
-   //   } else if (location === "videos" && id) {
-   //    pathAndData.path = `${apiHead}/movies/${id}/videos`;
-   //    pathAndData.data = `videos`;
-   //   } else if (location === `ratings` && id) {
-   //    pathAndData.path = `${apiHead}/users/${id}/ratings`;
-   //    pathAndData.data = `ratings`;
-   //   }
-   //   } else {
-   //    throw new Error("A bad path was provided for fetching data");
-   //   }
-   //   return pathAndData;
-   //  };
-  };
+ getRoomsData() {
+  let roomsData = fetch(`${this.rootURL}rooms/rooms`)
+   .then((response) => response.json())
+   .then((data) => {
+    return data.rooms;
+   })
+   .catch((err) => console.log(err.message));
+  return roomsData;
+ },
+
+ getBookingsData() {
+  let bookingsData = fetch(`${this.rootURL}bookings/bookings`)
+   .then((response) => response.json())
+   .then((data) => {
+    return data.bookings;
+   })
+   .catch((err) => console.log(err.message));
+  return bookingsData;
+ },
+
+ postNewBooking(newBooking) {
+  fetch(`${this.rootURL}bookings/bookings`, {
+   method: "POST",
+   headers: { "Content-Type": "application/json" },
+   body: JSON.stringify(newBooking),
+  })
+   .then((response) => response.json())
+   .then((data) => {
+    console.log("Success:", data);
+   })
+   .catch((error) => {
+    console.log("Failed:", error);
+   });
+ },
+
+ deleteBooking(deletedBooking) {
+  fetch(`${this.rootURL}bookings/bookings`, {
+   method: "DELETE",
+   headers: { "Content-Type": "application/json" },
+   body: JSON.stringify(deletedBooking),
+  })
+   .then((res) => res.json())
+   .then((data) => {
+    console.log("Success", data);
+   })
+   .catch((err) => console.log(err));
+ },
+};
 
 export default API
