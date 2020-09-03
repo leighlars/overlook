@@ -1,7 +1,12 @@
 # Overlook 
-Mod 2 Final Solo Project
+Remake of Mod 2 Project in React
 
 - [Leigh Larson](https://github.com/leighlars)
+- [Josh Sevy]
+- [Jordy Shryock]
+- [Steph Norton]
+- [Aaron Burris-DeBoskey]
+- [Amy Karnaze]
 <!-- - [Repo](https://github.com/leighlars/overlook-solo) -->
 - [Project Board](https://github.com/leighlars/overlook-solo/projects)
 - [Project Spec](https://frontend.turing.io/projects/overlook.html)
@@ -28,6 +33,7 @@ The total amount they have spent on rooms </br>
 
 ## Technologies / Systems
 - React 
+- React Router
 - Javascript ES6
 - TDD with Jest
 - VSCode 
@@ -35,4 +41,5 @@ The total amount they have spent on rooms </br>
 - Accessibility 
 - SCSS / SASS
 - API Fetch/Post
-- Webpack
+
+## Gif Showcase
