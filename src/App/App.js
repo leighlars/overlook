@@ -14,17 +14,32 @@ class App extends Component {
     }
   }
 
+
   render() {
     return (
      <div className="App">
       <Header isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
-      {this.state.isLoggedIn === false && <LandingPage />}
+      <LandingPage />
       <Route
        exact
        path="/login"
        render={() => {
         return <Login login={this.login} error={this.state.error} />;
        }}
+      />
+      <Route
+       exact
+       path="/manager-home"
+       //  render={() => {
+       //   return <Login login={this.login} error={this.state.error} />;
+       //  }}
+      />
+      <Route
+       exact
+       path="/guest-home"
+       //  render={() => {
+       //   return <Login login={this.login} error={this.state.error} />;
+       //  }}
       />
      </div>
     );

@@ -6,7 +6,6 @@
   justify-content: center;
   width: 70%;
   margin: 0 auto;
-  // margin-top: 2.25em;
   padding: 2%;
   h3 {
     @include headerFont(2.5em);
@@ -25,6 +24,7 @@
   margin: 2em;
   input {
     @include textFont(1em);
+    color: $grey;
     border-radius: 4px;
     margin: 5px;
     padding: 1%;
