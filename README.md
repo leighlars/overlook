@@ -7,10 +7,8 @@ Remake of Mod 2 Project in React
 - [Steph Norton]
 - [Aaron Burris-DeBoskey]
 - [Amy Karnaze]
-<!-- - [Repo](https://github.com/leighlars/overlook-solo) -->
 - [Project Board](https://github.com/leighlars/overlook-solo/projects)
 - [Project Spec](https://frontend.turing.io/projects/overlook.html)
-<!-- - [Deployed Pages](https://leighlars.github.io/overlook-solo/) -->
 
 ## Abstract 
 
