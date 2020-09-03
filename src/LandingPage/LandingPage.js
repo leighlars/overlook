@@ -1,6 +1,6 @@
 import React from "react";
 import "./LandingPage.scss";
-import './HotelImage.scss'
+// import './HotelImage.scss'
 import bedroom from  "../images/bedroom.JPG";
 import hiddenBed from  "../images/hidden-bed.JPG";
 import lobby from  "../images/lobby.JPG";
@@ -24,13 +24,13 @@ const LandingPage = () => {
   
   return (
    <section className="landing-section">
-    <h3 className="landing-greeting">Welcome Home</h3>
     <p className="welcome-text">
-     Relax in the sauna. Hike numerous nearby trails. <br />
+     Relax in the sauna. <br />
+     Hike numerous nearby trails. <br />
      Enjoy the views at sunset or sunrise. <br />
-     At The Overlook, you're not just here, you're <br />
-     <b>Home</b>
-    </p>
+     At <b>The Overlook</b>, you're not just here, you're <br /> 
+     </p>
+     <h3 className="landing-greeting">Home</h3>
     {hotelImages()}
    </section>
   );

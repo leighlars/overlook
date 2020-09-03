@@ -7,15 +7,29 @@
   justify-content: center;
   width: 70%;
   margin: 0 auto;
-  margin-top: 3em;
-  padding: 1%;
-  .landing-greeting {
-    @include headerFont(2.5em);
-    margin: .25em;
-  }
+  margin-top: 2.25em;
+  padding: 2%;
   .welcome-text {
     @include textFont(1.75em);
     text-align: center;
     margin: 0px;
   }
+  .landing-greeting {
+    @include headerFont(2.5em);
+    margin: .25em;
+  }
+}
+
+.hotel-images {
+  @include rowDisplay();
+  width: 90%;
+  overflow: scroll;
+  margin: 10px auto;
+}
+
+.hotel-image {
+  width: 15em;
+  height: 13em;
+  opacity: .6;
+  margin-right: 5px;
 }
