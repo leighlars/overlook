@@ -1,0 +1,45 @@
+@import '../styles/_variables.scss';
+
+.login-page {
+  @include columnDisplay();
+  @include borders();
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  // margin-top: 2.25em;
+  padding: 2%;
+  h3 {
+    @include headerFont(2.5em);
+    margin-top: 1.5em;
+    margin-bottom: 0px;
+  }
+  h4 {
+    @include textFont(1.25em);
+    margin: 0px;
+  }
+}
+
+
+.login-form {
+  @include columnDisplay();
+  margin: 2em;
+  input {
+    @include textFont(1em);
+    border-radius: 4px;
+    margin: 5px;
+    padding: 1%;
+  }
+  button {
+    background-color: $grey;
+    border-radius: 6px;
+    @include textFont(1em);
+    font-weight: bold;
+    color: white;
+    margin: 5px;
+    padding: .5%;
+    &:hover {
+      color: grey;
+      background: white;
+    }
+  }
+}
