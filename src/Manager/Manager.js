@@ -47,15 +47,15 @@ class Manager extends Component {
 /* <p id='open-rooms'>${this.getNumTodaysAvailability(this.todaysDate)}</p>
 <p id='booked-rooms'>${this.getTodaysBookedPercentage(this.todaysDate)}</p>
 <p id='revenue'>${this.getTodaysRevenue(this.todaysDate)}</p>  */
-// ^^^for the render once we've figured out data, not using it now. hard coded values instead for styling purposes.
+// ^^^for the render once we've figured out data, not using it now. hard coded values for now for styling purposes.
 
 render() {
   return (
    <>
     <div className="mgr-stats">
-     <p className="open-rooms">10 rooms booked</p>
-     <p className="booked-rooms">50% occupied</p>
-     <p className="revenue">$100</p>
+     <p className="open-rooms">Rooms Booked: 10</p>
+     <p className="booked-rooms">Occupancy: 50%</p>
+     <p className="revenue">Today's Revenue: $100</p>
      <MgrSearchForm />
     </div>
    </>
