@@ -21,7 +21,7 @@ describe('App', () => {
    const welcomeImages = screen.getAllByRole("img");
    expect(welcomeText).toBeInTheDocument();
    expect(welcomeImages).toHaveLength(8);
-   // should this be more specific and not use getAllBy to check header links?? 9 imgs was a lot to test for
+   // should this be more specific and not use getAllBy to check landing images??  imgs was a lot to test for
   })
 
   it("should render login form when Login link is clicked", () => {
