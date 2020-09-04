@@ -1,6 +1,6 @@
 const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
 
-    
+    //  needs to be changed to async
 class API  {
 
  fetchData() {
@@ -17,8 +17,9 @@ class API  {
   });
  }
 
+
  getUserData() {
-  let userData = fetch(`${this.rootURL}users/users`)
+  let userData = fetch(`${rootURL}users/users`)
    .then((response) => response.json())
    .then((data) => {
     return data.users;
@@ -28,7 +29,7 @@ class API  {
  }
 
  getRoomsData() {
-  let roomsData = fetch(`${this.rootURL}rooms/rooms`)
+  let roomsData = fetch(`${rootURL}rooms/rooms`)
    .then((response) => response.json())
    .then((data) => {
     return data.rooms;
@@ -38,7 +39,7 @@ class API  {
  }
 
  getBookingsData() {
-  let bookingsData = fetch(`${this.rootURL}bookings/bookings`)
+  let bookingsData = fetch(`${rootURL}bookings/bookings`)
    .then((response) => response.json())
    .then((data) => {
     return data.bookings;
@@ -47,8 +48,9 @@ class API  {
   return bookingsData;
  }
 
+
  postNewBooking(newBooking) {
-  fetch(`${this.rootURL}bookings/bookings`, {
+  fetch(`${rootURL}bookings/bookings`, {
    method: "POST",
    headers: { "Content-Type": "application/json" },
    body: JSON.stringify(newBooking),
@@ -63,7 +65,7 @@ class API  {
  }
 
  deleteBooking(deletedBooking) {
-  fetch(`${this.rootURL}bookings/bookings`, {
+  fetch(`${rootURL}bookings/bookings`, {
    method: "DELETE",
    headers: { "Content-Type": "application/json" },
    body: JSON.stringify(deletedBooking),

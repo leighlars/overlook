@@ -7,11 +7,11 @@ import PropTypes from "prop-types";
 
 
 
-const View = ({isLoggedIn, user}) => {
+const View = ({isLoggedIn, user, users, bookings, rooms}) => {
   return (
    <main>
     {isLoggedIn === false && <LandingPage />}
-    {user === "manager" && <Manager />}
+    {user === "manager" && <Manager users={users} />}
     {/* {user.id && <Guest />} */}
    </main>
   );

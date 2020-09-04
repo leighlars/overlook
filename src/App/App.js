@@ -4,6 +4,7 @@ import Header from "../Header/Header"
 import Login from '../Login/Login'
 import View from "../View/View";
 import { Route } from "react-router-dom"
+import CleanData from '../CleanData/CleanData'
 
 class App extends Component {
   constructor() {
@@ -11,10 +12,20 @@ class App extends Component {
     this.state = {
       isLoggedIn: false,
       user: {name: '', email: '', id: ''} || 'manager',
+      users: [],
       bookings: [],
       rooms: [],
       error: '',
 
+    }
+  }
+
+  componentDidMount = async () => {
+    try {
+      const data = CleanData.getData()
+
+    } catch (error) {
+      this.setState({error: 'Oops, something went wrong. ☹️ Please try again.'})
     }
   }
 
