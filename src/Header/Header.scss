@@ -12,7 +12,6 @@ header {
 
 .header-logo {
   @include headerFont(4em);
-  margin: 0px;
   margin-left: .5em;
   text-align: center;
   text-shadow: 5px 5px #000;
@@ -23,6 +22,7 @@ header {
   margin-right: 2em;
   .user-greeting {
     @include headerFont(2em);
+    text-shadow: 2px 4px #000;
     margin: 0 auto;
   }
 }
@@ -35,7 +35,7 @@ header {
     background-color: transparent;
     border-radius: 4px;
     text-decoration: none;
-    text-weight: bold;
+    font-weight: bold;
     margin: 5px;
     &:hover {
       text-decoration: underline;

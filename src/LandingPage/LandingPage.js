@@ -7,7 +7,6 @@ import outdoorBedroom from '../images/outdoorbedroom.JPG'
 import greenfall from '../images/greenfall.JPG'
 import sunnysail from "../images/sunnysail.jpg";
 import cove from "../images/cove.jpg";
-import sunnycanoe from "../images/sunnycanoe.jpg";
 import drone from "../images/drone.jpg";
 
 
@@ -23,7 +22,6 @@ const LandingPage = (props) => {
        <img src={greenfall} className='hotel-image' alt='Waterfall in morning sun'/>
        <img src={sunnysail} className='hotel-image' alt='Sailboat over clear blue waters on sunny day'/>
        <img src={cove} className='hotel-image' alt='Diver swimming in cave swimming pool'/>
-       <img src={sunnycanoe} className='hotel-image' alt='Canoe over clear blue waters in evening light'/>
      </div> 
     )
   } 

@@ -2,40 +2,43 @@
 
 .login-page {
   @include columnDisplay();
+  justify-content: flex-start;
   @include borders();
   width: 70%;
   margin: 0 auto;
-  margin-top: 12.25em;
+  margin-top: 10.25em;
   padding: 2%;
-  h3 {
+  .login-header {
     @include headerFont(2.5em);
-    margin-bottom: 0px;
+    margin: 3px auto;
   }
   h4 {
     @include textFont(1.25em);
-    margin: 0px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  img {
+    margin-bottom: 5px;
   }
 }
 
 
 .login-form {
   @include columnDisplay();
-  margin: 1em;
   input {
-    @include textFont(1em);
+    @include textFont(1.5em);
     color: $grey;
     border-radius: 4px;
     margin: 5px;
-    padding: 1%;
   }
   button {
     background-color: $grey;
     border-radius: 6px;
-    @include textFont(1em);
+    @include textFont(1.25em);
     font-weight: bold;
     color: white;
-    margin: 5px;
-    padding: .5%;
+    margin-top: 5px;
+    padding: 2%;
     &:hover {
       color: grey;
       background: white;
