@@ -6,7 +6,6 @@ const View = ({isLoggedIn}) => {
   return (
     <main>
       {isLoggedIn === false &&  (<LandingPage />)}
-      
     </main>
   )
 }

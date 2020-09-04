@@ -3,7 +3,7 @@ import './Header.scss'
 import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types'
 
-const Header = ({isLoggedIn}) => {
+const Header = ({isLoggedIn, user}) => {
   return (
    <header>
     <h1 className="header-logo">The Overlook</h1>
@@ -17,7 +17,7 @@ const Header = ({isLoggedIn}) => {
      <NavLink to="/" className={isLoggedIn ? "nav-btn logout" : 'hidden'}>
       Logout
      </NavLink>
-     <NavLink to="/user-home" className={isLoggedIn ? "nav-btn user profile" : 'hidden'}>
+     <NavLink to="/user-home" className={(isLoggedIn && user !== 'manager') ? "nav-btn user profile" : 'hidden'}>
       My Profile
      </NavLink>
     </div>

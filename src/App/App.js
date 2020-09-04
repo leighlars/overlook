@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: true,
       user: {name: '', email: '', id: ''} || 'manager',
       error: ''
     }
