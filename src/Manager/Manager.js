@@ -7,7 +7,6 @@ class Manager extends Component {
   super(props);
   this.state = {};
  }
-
 //  getAllTodaysBookings(todaysDate) {
 //   return this.bookings.filter((booking) => booking.date === todaysDate);
 //  }

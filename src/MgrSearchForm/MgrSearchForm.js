@@ -26,7 +26,6 @@ clearText = (event) => {
   this.setState({searchQuery: ''})
 } 
 
-
  render() {
   return (
    <form className="mgr-form">
