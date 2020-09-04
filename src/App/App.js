@@ -9,12 +9,11 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: true,
+      isLoggedIn: false,
       user: {name: '', email: '', id: ''} || 'manager',
       error: ''
     }
   }
-
 
   render() {
     return (
@@ -38,14 +37,14 @@ class App extends Component {
        exact
        path="/manager-dashboard"
         render={() => {
-         return <View login={this.login} error={this.state.error} />;
+         return <View user={this.user} error={this.state.error} />;
         }}
       />
       <Route
        exact
        path="/guest-dashboard"
         render={() => {
-         return <View login={this.login} error={this.state.error} />;
+         return <View user={this.user} error={this.state.error} />;
         }}
       />
      </div>

@@ -1,16 +1,16 @@
 import React from 'react'
 import './View.scss'
 import LandingPage from '../LandingPage/LandingPage'
-import MgrDash from '../MgrDash/MgrDash'
-import GuestDash from "../GuestDash/GuestDash";
+import Manager from '../Manager/Manager'
+import Guest from "../Guest/Guest";
 
 
 const View = ({isLoggedIn, user}) => {
   return (
    <main>
     {isLoggedIn === false && <LandingPage />}
-    {user === "manager" && <MgrDash />}
-    {user.id && <GuestDash />}
+    {user === "manager" && <Manager />}
+    {/* {user.id && <Guest />} */}
    </main>
   );
 }
