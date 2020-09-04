@@ -11,7 +11,10 @@ class App extends Component {
     this.state = {
       isLoggedIn: false,
       user: {name: '', email: '', id: ''} || 'manager',
-      error: ''
+      bookings: [],
+      rooms: [],
+      error: '',
+
     }
   }
 

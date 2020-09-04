@@ -1,8 +1,13 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Manager.scss";
 
-const MgrDash = () => {
+class Manager extends Component {
+ constructor() {
+  super();
+  this.state = {};
+ }
+
+ 
 
 }
-
-export default MgrDash
+export default Manager

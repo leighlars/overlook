@@ -3,6 +3,8 @@ import './View.scss'
 import LandingPage from '../LandingPage/LandingPage'
 import Manager from '../Manager/Manager'
 import Guest from "../Guest/Guest";
+import PropTypes from "prop-types";
+
 
 
 const View = ({isLoggedIn, user}) => {
@@ -20,3 +22,8 @@ const View = ({isLoggedIn, user}) => {
 
 
 export default View
+
+View.propTypes = {
+  user: PropTypes.object,
+  isLoggedIn: PropTypes.bool
+}

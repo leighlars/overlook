@@ -1,8 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Guest.scss";
 
-const Guest = () => {
-
+class Guest extends Component {
+  constructor() {
+    super()
+    this.state = {
+      
+    }
+  }
 }
 
 export default Guest
