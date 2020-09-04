@@ -44,10 +44,10 @@ class Manager extends Component {
 //   return this.users.filter((user) => user.name.includes(capFirstLtr));
 //  }
 
-// for the render method, not using it now.
 /* <p id='open-rooms'>${this.getNumTodaysAvailability(this.todaysDate)}</p>
 <p id='booked-rooms'>${this.getTodaysBookedPercentage(this.todaysDate)}</p>
 <p id='revenue'>${this.getTodaysRevenue(this.todaysDate)}</p>  */
+// ^^^for the render once we've figured out data, not using it now. hard coded values instead for styling purposes.
 
 render() {
   return (

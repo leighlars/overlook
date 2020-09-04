@@ -1,1 +1,15 @@
 @import '../styles/_variables.scss';
+
+.mgr-stats {
+  @include borders();
+  width: 30%;
+  margin: 0 auto;
+  padding: 2%;
+  @include columnDisplay();
+  @include textFont(1.85em);
+  p {
+    margin: 0;
+  }
+
+  
+}

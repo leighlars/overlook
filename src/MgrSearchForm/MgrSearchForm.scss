@@ -3,7 +3,7 @@
 .mgr-form {
   @include rowDisplay();
    input {
-    @include textFont(1em);
+    @include textFont(.75em);
     color: $grey;
     border-radius: 4px;
     margin: 5px;
@@ -12,7 +12,7 @@
    button {
     background-color: $grey;
     border-radius: 6px;
-    @include textFont(1em);
+    @include textFont(.75em);
     font-weight: bold;
     color: white;
     margin: 5px;

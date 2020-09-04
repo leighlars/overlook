@@ -30,16 +30,24 @@ clearText = (event) => {
  render() {
   return (
    <form className="mgr-form">
-    <input
-     aria-label="search-guests-input"
-     name="searchQuery"
-     onChange={this.handleChange}
-     placeholder="Search Guest Name"
-     type="text"
-     value={this.state.searchQuery}
-    />
-    <button className="mgr-search-btn" onClick={this.searchGuests}>Find</button>
-    <button className="clear-text-btn" onClick={this.clearText}>Clear</button>
+      <input
+      aria-label="search-guests-input"
+      name="searchQuery"
+      onChange={this.handleChange}
+      placeholder="Search Guest Name"
+      type="text"
+      value={this.state.searchQuery}
+      />
+      <button 
+        className="mgr-search-btn" 
+        onClick={this.searchGuests}>
+          Find
+      </button>
+      <button 
+        className="clear-text-btn" 
+        onClick={this.clearText}>
+          Clear
+      </button>
    </form>
   );
  }
