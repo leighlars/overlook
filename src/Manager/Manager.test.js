@@ -78,6 +78,7 @@ describe('Manager', () => {
   })
 
   it('should render daily stats', () => {
+    // these tests pass based on what's currently hardcoded. The actual values will be collected from methods once the data is fetched
     const availableRooms = screen.getByText("Rooms Available: 10")
     const percentOccupied = screen.getByText("Occupied Rooms: 50%")
     const revenue = screen.getByText("Today's Revenue: $100")
