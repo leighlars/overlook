@@ -3,9 +3,9 @@
 .login-page {
   @include columnDisplay();
   @include borders();
-  justify-content: center;
   width: 70%;
   margin: 0 auto;
+  margin-top: 5.25em;
   padding: 2%;
   h3 {
     @include headerFont(2.5em);
