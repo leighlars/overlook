@@ -4,7 +4,7 @@ import Header from "../Header/Header"
 import Login from '../Login/Login'
 import View from "../View/View";
 import { Route } from "react-router-dom"
-import CleanData from '../CleanData/CleanData'
+// import CleanData from '../CleanData/CleanData'
 
 class App extends Component {
   constructor() {
