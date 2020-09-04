@@ -3,8 +3,6 @@ import './App.scss'
 import Header from "../Header/Header"
 import Login from '../Login/Login'
 import Main from "../Main/Main";
-
-import LandingPage from '../LandingPage/LandingPage'
 import { Route } from "react-router-dom"
 
 class App extends Component {

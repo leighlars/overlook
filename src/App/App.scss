@@ -1,10 +1,5 @@
 @import '../styles/_variables.scss';
 
-#root, .App {
-  height: 100%;
-  color: white;
-}
-
 html, body {
   height: 100%;
 }
@@ -12,10 +7,10 @@ html, body {
 body {
   background: url(../images/plants.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
   font-family: 'Josefin Sans', serif;
-  padding: 1%;
 }
 

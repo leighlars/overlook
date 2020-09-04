@@ -11,7 +11,6 @@ const Header = ({isLoggedIn}) => {
      <NavLink to="/" className="nav-btn home">
       Home
      </NavLink>
-     |
      <NavLink to="/login" className={isLoggedIn ? "hidden" : "nav-btn login"}>
       Login
      </NavLink>

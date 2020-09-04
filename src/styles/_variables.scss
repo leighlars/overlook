@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
+
 $grey: grey;
 $transparentGreen: rgba(68, 121, 73, 0.71);
 
@@ -24,6 +25,7 @@ $transparentGreen: rgba(68, 121, 73, 0.71);
   background: $transparentGreen;
   border: 1px solid $grey;
   border-radius: 6px;
+  box-shadow: 1px 1px 5px black;
 }
 
 @mixin columnDisplay() {
@@ -42,4 +44,21 @@ $transparentGreen: rgba(68, 121, 73, 0.71);
 
 .hidden {
   display: none;
+}
+
+.hotel-images {
+  @include rowDisplay();
+  justify-content: initial;
+  width: 90%;
+  overflow: scroll;
+  margin: 10px auto;
+}
+
+.hotel-image {
+  width: 15em;
+  height: 13em;
+  opacity: .8;
+  margin-right: 5px;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 5px black;
 }

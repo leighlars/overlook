@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Login.scss'
-import happyHour from '../images/happyhour.jpg'
+import stairs from '../images/stairs.jpg'
 
 class Login extends Component {
   constructor(props) {
@@ -41,28 +41,27 @@ class Login extends Component {
 
   render() {
     return (
-      <section className='login-page'>
-        <img src={happyHour} className='hotel-image' alt='hotel with mountain'/>
-        <h3 className='login-header'>Relax, or Adventure</h3>
-        <h4><i>The choice is yours.</i></h4>
-        <form className="login-form" onSubmit={this.login}>
-          <input
-            onChange={this.handleChange}
-            aria-label="username-input"
-            name="userName"
-            placeholder="Username"
-            type="text"
-          />
-          <input
-            onChange={this.handleChange}
-            aria-label="password-input"
-            name="password"
-            placeholder="Password"
-            type="password"
-          />
-          <button className="login-btn">Login</button>
-        </form>
-      </section>
+     <section className="login-page">
+      <img src={stairs} className="hotel-image" alt="image of stairs" />
+      <h3 className="login-header">Come Join Us</h3>
+      <form className="login-form" onSubmit={this.login}>
+       <input
+        onChange={this.handleChange}
+        aria-label="username-input"
+        name="userName"
+        placeholder="Username"
+        type="text"
+       />
+       <input
+        onChange={this.handleChange}
+        aria-label="password-input"
+        name="password"
+        placeholder="Password"
+        type="password"
+       />
+       <button className="login-btn">Login</button>
+      </form>
+     </section>
     );
   }
 

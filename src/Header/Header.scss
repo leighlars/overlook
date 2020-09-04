@@ -4,19 +4,21 @@
 header {
   @include rowDisplay();
   justify-content: space-between;
-  width: 95%;
-  margin: .75em auto;
+  width: 100%;
+  padding: 1%;
 }
 
 .header-logo {
   @include headerFont(4em);
   margin: 0px;
+  margin-left: .5em;
   text-align: center;
   text-shadow: 2px 2px #000;
 }
 
 .nav-btns {
   @include rowDisplay();
+  margin-right: 2em;
 }
 
 .nav-btn {
@@ -27,7 +29,6 @@ header {
   text-decoration: none;
   margin: 5px;
   &:hover {
-      // text-shadow: 2px 2px #000;
-      text-decoration: underline;
+    text-decoration: underline;
     }
 }

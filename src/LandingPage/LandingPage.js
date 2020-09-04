@@ -14,7 +14,7 @@ import drone from "../images/drone.jpg";
 const LandingPage = () => {
   const hotelImages = () => {
     return (
-     <div className='hotel-images'>
+     <div className='landing-images'>
        <img src={nets} className='hotel-image' alt='hotel with mountain'/>
        <img src={waterfall} className='hotel-image' alt='hotel with mountain'/>
        <img src={nightlights} className='hotel-image' alt='hotel with mountain'/>

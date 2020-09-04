@@ -19,18 +19,10 @@
     margin: .25em;
   }
 }
-
-.hotel-images {
+.landing-images {
   @include rowDisplay();
   justify-content: initial;
   width: 90%;
   overflow: scroll;
   margin: 10px auto;
-}
-
-.hotel-image {
-  width: 15em;
-  height: 13em;
-  opacity: .8;
-  margin-right: 5px;
 }
