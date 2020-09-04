@@ -36,7 +36,7 @@ describe('MgrSearchForm', () => {
     const findBtn = screen.getByRole("button", { name: "Find" })
     fireEvent.click(findBtn);
     expect(mockSearchGuest).toBeCalledTimes(1);
-    
+    // not working bc fetch method not implemented
   });
 
 
