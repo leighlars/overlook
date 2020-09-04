@@ -18,6 +18,10 @@ header {
   text-shadow: 2px 2px #000;
 }
 
+.right-header{
+  @include columnDisplay();
+}
+
 .nav-btns {
   @include rowDisplay();
   margin-right: 2em;
