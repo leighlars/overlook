@@ -36,14 +36,14 @@ class App extends Component {
       />
       <Route
        exact
-       path="/manager-home"
+       path="/manager-dashboard"
         render={() => {
          return <View login={this.login} error={this.state.error} />;
         }}
       />
       <Route
        exact
-       path="/guest-home"
+       path="/guest-dashboard"
         render={() => {
          return <View login={this.login} error={this.state.error} />;
         }}
