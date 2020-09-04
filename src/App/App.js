@@ -28,8 +28,8 @@ class App extends Component {
   //   }
   // }
 
+
   render() {
-    console.log(this.state)
     return (
      <div className="App">
       <Header isLoggedIn={this.state.isLoggedIn} user={this.state.user} />

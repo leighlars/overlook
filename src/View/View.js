@@ -12,7 +12,7 @@ const View = ({user, users, bookings, rooms, error}) => {
    <main>
     {!user && <LandingPage />}
     {user === 'manager' && <Manager users={users} bookings={bookings} rooms={rooms} error={error}/>}
-    {/* {user.name && <Guest />} */}
+    {/* {user.name && <Guest bookings={bookings} error={error}/>} */}
    </main>
   );
 }
