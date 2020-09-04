@@ -25,9 +25,19 @@ describe('Login', () => {
     const loginBtn = screen.getByRole('button', {name: 'Login'})
 
     expect(usernameInput).toBeInTheDocument()
-    expect(usernameInput).toBeInTheDocument()
+    expect(passwordInput).toBeInTheDocument()
     expect(loginBtn).toBeInTheDocument()
   })
+
+  it('should reflect change in value when data is input in form', () => {
+   const nameInput = screen.getByPlaceholderText("Search Guest Name")
+
+   expect(nameInput.value).toBe("")
+
+   fireEvent.change(nameInput, { target: { value: "Sarah" } })
+
+   expect(nameInput.value).toBe("Sarah")
+  });
 
   xit('should fire an event when login button is clicked', () => {
     const loginBtn = screen.getByRole("button", { name: "Login" });
