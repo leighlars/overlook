@@ -11,7 +11,7 @@ const View = ({isLoggedIn, user, users, bookings, rooms}) => {
   return (
    <main>
     {isLoggedIn === false && <LandingPage />}
-    {user === "manager" && <Manager users={users} />}
+    {<Manager users={users} />}
     {/* {user.id && <Guest />} */}
    </main>
   );

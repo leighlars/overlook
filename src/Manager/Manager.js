@@ -44,16 +44,21 @@ class Manager extends Component {
 //   return this.users.filter((user) => user.name.includes(capFirstLtr));
 //  }
 
+// for the render method, not using it now.
+/* <p id='open-rooms'>${this.getNumTodaysAvailability(this.todaysDate)}</p>
+<p id='booked-rooms'>${this.getTodaysBookedPercentage(this.todaysDate)}</p>
+<p id='revenue'>${this.getTodaysRevenue(this.todaysDate)}</p>  */
+
 render() {
-  return(
-    <>
-      <div className='mgr-stats'>
-        <p id='open-rooms'>${this.overlook.getNumTodaysAvailability(this.todaysDate)}</p>
-        <p id='booked-rooms'>${this.overlook.getTodaysBookedPercentage(this.todaysDate)}</p>
-        <p id='revenue'>${this.overlook.getTodaysRevenue(this.todaysDate)}</p> 
-      </div>
-      <MgrSearchForm />
-    </>
+  return (
+   <>
+    <div className="mgr-stats">
+     <p className="open-rooms">10 rooms booked</p>
+     <p className="booked-rooms">50% occupied</p>
+     <p className="revenue">$100</p>
+     <MgrSearchForm />
+    </div>
+   </>
   );
 }
 

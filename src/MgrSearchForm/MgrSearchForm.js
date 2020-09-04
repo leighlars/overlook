@@ -16,6 +16,7 @@ class MgrSearchForm extends Component {
  searchGuests = (event) => {
   event.preventDefault()
   // this.props.searchMovies(this.state.searchQuery);
+  // should this method be a prop or native to this component?
   this.setState({ searchQuery: '' })
  };
 
@@ -28,7 +29,7 @@ clearText = (event) => {
 
  render() {
   return (
-   <form className="search-bar">
+   <form className="mgr-form">
     <input
      aria-label="search-guests-input"
      name="searchQuery"

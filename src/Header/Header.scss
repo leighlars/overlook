@@ -6,7 +6,7 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 1%;
-  background: black;
+  // background: black;
   position: fixed;
 }
 
@@ -29,6 +29,7 @@ header {
   background-color: transparent;
   border-radius: 4px;
   text-decoration: none;
+  text-weight: bold;
   margin: 5px;
   &:hover {
     text-decoration: underline;
