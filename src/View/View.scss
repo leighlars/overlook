@@ -2,9 +2,10 @@
  
  main {
   @include columnDisplay();
-  justify-content: center;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 5.25em;
+  height: 90%;
+  margin: auto;
+  margin-top: 12.25em;
   padding: 1%;
+  overflow: scroll;
  }

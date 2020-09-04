@@ -1,0 +1,14 @@
+@import '../styles/_variables.scss';
+
+.error-box {
+  @include columnDisplay();
+  text-align: center;
+  h2 {
+    @include headerFont(2em);
+    margin-top: 20px;
+  }
+  p {
+    @include textFont(1em);
+    margin: 3px;
+  }
+}

@@ -3,8 +3,8 @@ import './Login.scss'
 
 
 class Login extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       userName: '',
       password: '', 
@@ -41,27 +41,29 @@ class Login extends Component {
 
   render() {
     return (
-      <section className='login-page'>
-        <h3 className='login-header'>Relax, or Adventure</h3>
-        <h4><i>The choice is yours.</i></h4>
-        <form className="login-form" onSubmit={this.login}>
-          <input
-            onChange={this.handleChange}
-            aria-label="username-input"
-            name="userName"
-            placeholder="Username"
-            type="text"
-          />
-          <input
-            onChange={this.handleChange}
-            aria-label="password-input"
-            name="password"
-            placeholder="Password"
-            type="password"
-          />
-          <button className="login-btn">Login</button>
-        </form>
-      </section>
+     <section className="login-page">
+      <h3 className="login-header">Relax, or Adventure</h3>
+      <h4>
+       <i>The choice is yours.</i>
+      </h4>
+      <form className="login-form" onSubmit={this.login}>
+       <input
+        onChange={this.handleChange}
+        aria-label="username-input"
+        name="userName"
+        placeholder="Username"
+        type="text"
+       />
+       <input
+        onChange={this.handleChange}
+        aria-label="password-input"
+        name="password"
+        placeholder="Password"
+        type="password"
+       />
+       <button className="login-btn">Login</button>
+      </form>
+     </section>
     );
   }
 

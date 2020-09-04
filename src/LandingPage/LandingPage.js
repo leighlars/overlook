@@ -11,7 +11,7 @@ import sunnycanoe from "../images/sunnycanoe.jpg";
 import drone from "../images/drone.jpg";
 
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const hotelImages = () => {
     return (
      <div className='landing-images'>

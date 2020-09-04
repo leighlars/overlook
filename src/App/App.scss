@@ -1,7 +1,15 @@
 @import '../styles/_variables.scss';
 
+.App {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 body {

@@ -44,7 +44,7 @@ class App extends Component {
        exact
        path="/login"
        render={() => {
-        return <Login error={this.state.error} />;
+        return <Login isLoggedIn={this.state.isLoggedIn} error={this.state.error} />;
        }}
       />
       <Route
