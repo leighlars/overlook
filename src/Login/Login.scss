@@ -9,7 +9,6 @@
   padding: 2%;
   h3 {
     @include headerFont(2.5em);
-    margin-top: 1.5em;
     margin-bottom: 0px;
   }
   h4 {
@@ -21,7 +20,7 @@
 
 .login-form {
   @include columnDisplay();
-  margin: 2em;
+  margin: 1em;
   input {
     @include textFont(1em);
     color: $grey;

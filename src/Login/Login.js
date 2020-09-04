@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Login.scss'
+import happyHour from '../images/happyhour.jpg'
 
 class Login extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class Login extends Component {
   render() {
     return (
       <section className='login-page'>
+        <img src={happyHour} className='hotel-image' alt='hotel with mountain'/>
         <h3 className='login-header'>Relax, or Adventure</h3>
         <h4><i>The choice is yours.</i></h4>
         <form className="login-form" onSubmit={this.login}>

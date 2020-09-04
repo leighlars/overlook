@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './App.scss'
 import Header from "../Header/Header"
 import Login from '../Login/Login'
+import Main from "../Main/Main";
+
 import LandingPage from '../LandingPage/LandingPage'
 import { Route } from "react-router-dom"
 
@@ -19,7 +21,6 @@ class App extends Component {
     return (
      <div className="App">
       <Header isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
-      <LandingPage />
       <Route
        exact
        path="/login"
@@ -27,6 +28,7 @@ class App extends Component {
         return <Login login={this.login} error={this.state.error} />;
        }}
       />
+      <Main isLoggedIn={this.state.isLoggedIn}/>
       <Route
        exact
        path="/manager-home"
