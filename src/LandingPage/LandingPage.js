@@ -1,11 +1,15 @@
 import React from "react";
 import "./LandingPage.scss";
-// import birdEye from  "../images/birdseye.JPG";
 import nets from  "../images/nets.JPG";
 import waterfall from  "../images/waterfall.JPG";
 import nightlights from  "../images/nightlights.JPG";
 import outdoorBedroom from '../images/outdoorbedroom.JPG'
 import greenfall from '../images/greenfall.JPG'
+import sunnysail from "../images/sunnysail.jpg";
+import cove from "../images/cove.jpg";
+import sunnycanoe from "../images/sunnycanoe.jpg";
+import drone from "../images/drone.jpg";
+
 
 const LandingPage = () => {
   const hotelImages = () => {
@@ -16,6 +20,10 @@ const LandingPage = () => {
        <img src={nightlights} className='hotel-image' alt='hotel with mountain'/>
        <img src={outdoorBedroom} className='hotel-image' alt='hotel with mountain'/>
        <img src={greenfall} className='hotel-image' alt='hotel with mountain'/>
+       <img src={sunnysail} className='hotel-image' alt='hotel with mountain'/>
+       <img src={cove} className='hotel-image' alt='hotel with mountain'/>
+       <img src={sunnycanoe} className='hotel-image' alt='hotel with mountain'/>
+       <img src={drone} className='hotel-image' alt='hotel with mountain'/>
      </div> 
     )
   } 
