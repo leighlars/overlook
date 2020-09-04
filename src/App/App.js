@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.scss'
 import Header from "../Header/Header"
 import Login from '../Login/Login'
-import Main from "../Main/Main";
+import View from "../View/View";
 import { Route } from "react-router-dom"
 
 class App extends Component {
@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       isLoggedIn: false,
-      user: {name: '', email: '', id: ''},
+      user: {name: '', email: '', id: ''} || 'manager',
+      error: ''
     }
   }
 
@@ -23,29 +24,29 @@ class App extends Component {
       exact 
       path='/'
       render={()=> {
-        return <Main isLoggedIn={this.state.isLoggedIn} />
+        return <View isLoggedIn={this.state.isLoggedIn} />
       }}
       />
       <Route
        exact
        path="/login"
        render={() => {
-        return <Login login={this.login} error={this.state.error} />;
+        return <Login error={this.state.error} />;
        }}
       />
       <Route
        exact
        path="/manager-home"
-       //  render={() => {
-       //   return <Login login={this.login} error={this.state.error} />;
-       //  }}
+        render={() => {
+         return <View login={this.login} error={this.state.error} />;
+        }}
       />
       <Route
        exact
        path="/guest-home"
-       //  render={() => {
-       //   return <Login login={this.login} error={this.state.error} />;
-       //  }}
+        render={() => {
+         return <View login={this.login} error={this.state.error} />;
+        }}
       />
      </div>
     );

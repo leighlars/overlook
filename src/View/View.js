@@ -1,11 +1,12 @@
 import React from 'react'
-import './Main.scss'
+import './View.scss'
 import LandingPage from '../LandingPage/LandingPage'
 
-const Main = ({isLoggedIn}) => {
+const View = ({isLoggedIn}) => {
   return (
     <main>
       {isLoggedIn === false &&  (<LandingPage />)}
+      
     </main>
   )
 }
@@ -14,4 +15,4 @@ const Main = ({isLoggedIn}) => {
   
 
 
-export default Main
+export default View

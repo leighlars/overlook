@@ -7,7 +7,6 @@
   justify-content: center;
   width: 70%;
   margin: 0 auto;
-  margin-top: 5.25em;
   padding: 2%;
   .welcome-text {
     @include textFont(1.75em);
@@ -18,11 +17,11 @@
     @include headerFont(2.5em);
     margin: .25em;
   }
-}
-.landing-images {
-  @include rowDisplay();
-  justify-content: initial;
-  width: 90%;
-  overflow: scroll;
-  margin: 10px auto;
+  .landing-images {
+    @include rowDisplay();
+    justify-content: initial;
+    width: 90%;
+    overflow: scroll;
+    margin: 10px auto;
+  }
 }

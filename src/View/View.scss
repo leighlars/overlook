@@ -1,0 +1,10 @@
+ @import '../styles/_variables.scss';
+ 
+ main {
+  @include columnDisplay();
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5.25em;
+  padding: 1%;
+ }
