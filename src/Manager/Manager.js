@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./Manager.scss";
+import ManagerSearchForm from '../MgrSearchForm/MgrSearchForm'
 
 class Manager extends Component {
  constructor(props) {
@@ -42,5 +43,19 @@ class Manager extends Component {
 //   let capFirstLtr = input.charAt(0).toUpperCase() + input.slice(1);
 //   return this.users.filter((user) => user.name.includes(capFirstLtr));
 //  }
+
+render() {
+  return(
+    <>
+      <div className='mgr-stats'>
+        <p id='open-rooms'>${this.overlook.getNumTodaysAvailability(this.todaysDate)}</p>
+        <p id='booked-rooms'>${this.overlook.getTodaysBookedPercentage(this.todaysDate)}</p>
+        <p id='revenue'>${this.overlook.getTodaysRevenue(this.todaysDate)}</p> 
+      </div>
+
+    </>
+  );
+}
+
 }
 export default Manager

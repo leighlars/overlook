@@ -20,14 +20,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount = async () => {
-    try {
-      const data = CleanData.getData()
+  // componentDidMount = async () => {
+  //   try {
+  //     const data = CleanData.getData()
 
-    } catch (error) {
-      this.setState({error: 'Oops, something went wrong. ☹️ Please try again.'})
-    }
-  }
+  //   } catch (error) {
+  //     this.setState({error: 'Oops, something went wrong. ☹️ Please try again.'})
+  //   }
+  // }
 
   render() {
     return (
@@ -51,7 +51,7 @@ class App extends Component {
        exact
        path="/manager-dashboard"
         render={() => {
-         return <View user={this.user} error={this.state.error} />;
+         return <View user={this.user} users={this.users} bookings={this.bookings} rooms={this.rooms} error={this.state.error} />;
         }}
       />
       <Route
