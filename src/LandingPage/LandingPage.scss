@@ -7,7 +7,7 @@
   justify-content: center;
   width: 70%;
   margin: 0 auto;
-  margin-top: 2.25em;
+  margin-top: 5.25em;
   padding: 2%;
   .welcome-text {
     @include textFont(1.75em);
@@ -31,6 +31,6 @@
 .hotel-image {
   width: 15em;
   height: 13em;
-  opacity: .6;
+  opacity: .8;
   margin-right: 5px;
 }

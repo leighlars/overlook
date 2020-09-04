@@ -2,6 +2,7 @@
 
 #root, .App {
   height: 100%;
+  color: white;
 }
 
 html, body {
@@ -9,8 +10,9 @@ html, body {
 }
 
 body {
-  background: url(../images/mountains.jpg);
+  background: url(../images/plants.jpg);
   background-size: cover;
+  color: white;
   display: flex;
   flex-direction: column;
   font-family: 'Josefin Sans', serif;

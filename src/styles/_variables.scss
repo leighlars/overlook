@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
 $grey: grey;
-$transparentMauve: hsla(258, 17%, 39%, 0.76);
-$opaqueMauve: hsla(297, 13%, 31%, 1.0);
+$transparentGreen: rgba(68, 121, 73, 0.71);
 
 @mixin headerFont($font-size) {
   font-family: 'Satisfy', cursive;
@@ -22,7 +21,7 @@ $opaqueMauve: hsla(297, 13%, 31%, 1.0);
 
 
 @mixin borders() {
-  background: $transparentMauve;
+  background: $transparentGreen;
   border: 1px solid $grey;
   border-radius: 6px;
 }
