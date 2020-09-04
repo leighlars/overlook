@@ -8,7 +8,7 @@ const Header = ({isLoggedIn, user}) => {
    <header>
     <h1 className="header-logo">The Overlook</h1>
     <div className='right-header'>
-      {user.name && <h3 className='welcome-greeting'>Welcome, {user.name}</h3>}
+      {user && <h3 className='user-greeting'>Welcome, {user.name}</h3>}
       <div className="nav-btns">
       <NavLink to="/" className="nav-btn home">
         Home

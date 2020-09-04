@@ -18,24 +18,27 @@ header {
   text-shadow: 2px 2px #000;
 }
 
-.right-header{
+.right-header {
   @include columnDisplay();
+  margin-right: 2em;
+  .user-greeting {
+    @include headerFont(2em);
+    margin: 0 auto;
+  }
 }
 
 .nav-btns {
   @include rowDisplay();
-  margin-right: 2em;
-}
-
-.nav-btn {
-  @include textFont(1.25em);
-  color: white;
-  background-color: transparent;
-  border-radius: 4px;
-  text-decoration: none;
-  text-weight: bold;
-  margin: 5px;
-  &:hover {
-    text-decoration: underline;
-    }
+  .nav-btn {
+    @include textFont(1.25em);
+    color: white;
+    background-color: transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    text-weight: bold;
+    margin: 5px;
+    &:hover {
+      text-decoration: underline;
+      }
+  }
 }
