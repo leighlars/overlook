@@ -13,7 +13,7 @@ class MgrSearchForm extends Component {
   this.setState({ searchQuery: event.target.value })
  };
 
- searchMovies = (event) => {
+ searchGuests = (event) => {
   event.preventDefault()
   // this.props.searchMovies(this.state.searchQuery);
   this.setState({ searchQuery: '' })

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./Manager.scss";
-import ManagerSearchForm from '../MgrSearchForm/MgrSearchForm'
+import MgrSearchForm from '../MgrSearchForm/MgrSearchForm'
 
 class Manager extends Component {
  constructor(props) {
@@ -52,7 +52,7 @@ render() {
         <p id='booked-rooms'>${this.overlook.getTodaysBookedPercentage(this.todaysDate)}</p>
         <p id='revenue'>${this.overlook.getTodaysRevenue(this.todaysDate)}</p> 
       </div>
-
+      <MgrSearchForm />
     </>
   );
 }
