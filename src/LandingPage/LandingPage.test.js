@@ -13,9 +13,9 @@ describe('LandingPage', () => {
 
   it('should render a greeting text and array of images', () => {
     const greeting = screen.getByRole('heading', {name: 'Home'})
-    const images = screen.getAllByAltText('hotel with mountain')
+    const images = screen.getAllByRole('img')
     expect(greeting).toBeInTheDocument()
-    expect(images).toHaveLength(6)
+    expect(images).toHaveLength(9)
   })
 
 })
