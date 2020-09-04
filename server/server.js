@@ -46,7 +46,7 @@ app.post('/api/v1/bookings', (req, resp) => {
 
   for (let prop of requiredProp) {
     if (!recievedProp.includes(prop)) {
-      return resp.status(418).json({ error: `Your a little tea pot, add ${prop}` })
+      return resp.status(418).json({ error: `You're a little tea pot, add ${prop}` })
     }
   }
 
