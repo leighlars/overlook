@@ -11,7 +11,7 @@ class App extends Component {
     super()
     this.state = {
       isLoggedIn: false,
-      user: 'manager' || {name: '', email: '', id: ''},
+      user: {name: '', email: '', id: ''} || 'manager',
       users: [],
       bookings: [],
       rooms: [],
