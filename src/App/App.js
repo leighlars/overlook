@@ -10,8 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: false,
-      user: 'manager' || {name: '', email: '', id: ''},
+      user: {name: '', email: '', id: ''} || "manager" || null,
       users: [],
       bookings: [],
       rooms: [],
@@ -30,6 +29,7 @@ class App extends Component {
   // }
 
   render() {
+    console.log(this.state)
     return (
      <div className="App">
       <Header isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
@@ -51,14 +51,14 @@ class App extends Component {
        exact
        path="/manager-dashboard"
         render={() => {
-         return <View user={this.user} users={this.users} bookings={this.bookings} rooms={this.rooms} error={this.state.error} />;
+         return <View user={this.state.user} users={this.users} bookings={this.bookings} rooms={this.rooms} error={this.state.error} />;
         }}
       />
       <Route
        exact
        path="/guest-dashboard/:name"
         render={() => {
-         return <View user={this.user} error={this.state.error} />;
+         return <View user={this.state.user} error={this.state.error} />;
         }}
       />
      </div>

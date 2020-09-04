@@ -7,12 +7,12 @@ import PropTypes from "prop-types";
 
 
 
-const View = ({isLoggedIn, user, users, bookings, rooms, error}) => {
+const View = ({user, users, bookings, rooms, error}) => {
   return (
    <main>
-    {isLoggedIn === false && <LandingPage />}
+    {!user && <LandingPage />}
     {user === 'manager' && <Manager users={users} bookings={bookings} rooms={rooms} error={error}/>}
-    {/* {user.id && <Guest />} */}
+    {/* {user.name && <Guest />} */}
    </main>
   );
 }
@@ -24,6 +24,6 @@ const View = ({isLoggedIn, user, users, bookings, rooms, error}) => {
 export default View
 
 View.propTypes = {
-  user: PropTypes.object,
+  user: PropTypes.object || PropTypes.string,
   isLoggedIn: PropTypes.bool
 }
