@@ -16,7 +16,7 @@ class MgrSearchForm extends Component {
  searchGuests = (event) => {
   event.preventDefault()
   // this.props.searchMovies(this.state.searchQuery);
-  // should this method be a prop or native to this component?
+  // ^^should this method be a prop or native to this component?
   this.setState({ searchQuery: '' })
  };
 

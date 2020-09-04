@@ -20,7 +20,7 @@ describe('App', () => {
    const welcomeText = screen.getByRole("heading", { name: "Home" });
    const welcomeImages = screen.getAllByRole("img");
    expect(welcomeText).toBeInTheDocument();
-   expect(welcomeImages).toHaveLength(9);
+   expect(welcomeImages).toHaveLength(8);
    // should this be more specific and not use getAllBy to check header links?? 9 imgs was a lot to test for
   })
 
