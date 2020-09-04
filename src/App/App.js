@@ -42,7 +42,7 @@ class App extends Component {
       />
       <Route
        exact
-       path="/guest-dashboard"
+       path="/guest-dashboard/:name"
         render={() => {
          return <View user={this.user} error={this.state.error} />;
         }}
