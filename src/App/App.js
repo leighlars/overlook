@@ -19,6 +19,13 @@ class App extends Component {
     return (
      <div className="App">
       <Header isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+      <Route 
+      exact 
+      path='/'
+      render={()=> {
+        return <Main isLoggedIn={this.state.isLoggedIn} />
+      }}
+      />
       <Route
        exact
        path="/login"
@@ -26,7 +33,6 @@ class App extends Component {
         return <Login login={this.login} error={this.state.error} />;
        }}
       />
-      <Main isLoggedIn={this.state.isLoggedIn}/>
       <Route
        exact
        path="/manager-home"
