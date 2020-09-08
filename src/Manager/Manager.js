@@ -52,8 +52,8 @@ render() {
   return (
    <>
     <div className="mgr-stats">
-     <p className="open-rooms">Rooms Booked: 10</p>
-     <p className="booked-rooms">Occupancy: 50%</p>
+     <p className="open-rooms">Rooms Available: 10</p>
+     <p className="booked-rooms">Occupied Rooms: 50%</p>
      <p className="revenue">Today's Revenue: $100</p>
      <MgrSearchForm />
     </div>

@@ -33,5 +33,7 @@ describe('Header', () => {
     const logoutLink = screen.getByRole('link', {name: "Logout"})
     expect(logoutLink.className).toBe('hidden active')
   })
+
+  
 })
 

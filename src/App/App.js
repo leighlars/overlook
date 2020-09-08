@@ -4,14 +4,13 @@ import Header from "../Header/Header"
 import Login from '../Login/Login'
 import View from "../View/View";
 import { Route } from "react-router-dom"
-import CleanData from '../CleanData/CleanData'
+// import CleanData from '../CleanData/CleanData'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: false,
-      user: {name: '', email: '', id: ''} || 'manager',
+      user: {name: '', email: '', id: ''} || "manager" || null,
       users: [],
       bookings: [],
       rooms: [],
@@ -28,6 +27,7 @@ class App extends Component {
   //     this.setState({error: 'Oops, something went wrong. ☹️ Please try again.'})
   //   }
   // }
+
 
   render() {
     return (
@@ -51,14 +51,14 @@ class App extends Component {
        exact
        path="/manager-dashboard"
         render={() => {
-         return <View user={this.user} users={this.users} bookings={this.bookings} rooms={this.rooms} error={this.state.error} />;
+         return <View user={this.state.user} users={this.users} bookings={this.bookings} rooms={this.rooms} error={this.state.error} />;
         }}
       />
       <Route
        exact
        path="/guest-dashboard/:name"
         render={() => {
-         return <View user={this.user} error={this.state.error} />;
+         return <View user={this.state.user} error={this.state.error} />;
         }}
       />
      </div>
