@@ -19,7 +19,10 @@ class App extends Component {
     }
   }
 
-  // componentDidMount = async () => {
+  componentDidMount = async () => {
+    await getUserData() 
+      .then(data => this.setState({users: data}))
+      .catch((err) => console.log(err.message));
   //   try {
   //     const data = CleanData.getData()
 
