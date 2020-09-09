@@ -4,7 +4,7 @@ import Header from "../Header/Header"
 import Login from '../Login/Login'
 import View from "../View/View";
 import { Route } from "react-router-dom"
-// import CleanData from '../CleanData/CleanData'
+import { getUserData, getRoomsData, getBookingsData } from '../API/API'
 
 class App extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends Component {
 
     }
   }
-
+// better error handeling
   componentDidMount = async () => {
     await getUserData() 
       .then(data => this.setState({users: data}))
@@ -26,14 +26,10 @@ class App extends Component {
     await getRoomsData()
       .then(data => this.setState({rooms: data}))
       .catch((err) => console.log(err.message));
-  //   try {
-  //     const data = CleanData.getData()
-
-  //   } catch (error) {
-  //     this.setState({error: 'Oops, something went wrong. ☹️ Please try again.'})
-  //   }
-  // }
-
+    await getBookingsData()
+      .then(data => this.setState({bookings: data}))
+      .catch((err) => console.log(err.message));
+  }
 
   render() {
     return (
