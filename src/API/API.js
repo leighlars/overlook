@@ -1,7 +1,6 @@
 const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
 
     //  needs to be changed to async
-class API  {
 
  fetchData() {
   let userData = this.getUserData();
@@ -18,14 +17,9 @@ class API  {
  }
 
 
- getUserData() {
-  let userData = fetch(`${rootURL}users/users`)
-   .then((response) => response.json())
-   .then((data) => {
-    return data.users;
-   })
-   .catch((err) => console.log(err.message));
-  return userData;
+ export const getUserData = () => {
+   return fetch(`${rootURL}users/users`)
+     .then(response => response.json())
  }
 
  getRoomsData() {
@@ -76,6 +70,5 @@ class API  {
    })
    .catch((err) => console.log(err));
  }
-}
 
 export default API
