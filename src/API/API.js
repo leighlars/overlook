@@ -12,16 +12,10 @@ const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
      .then(response => response.json())
  }
 
- getBookingsData() {
-  let bookingsData = fetch(`${rootURL}bookings/bookings`)
-   .then((response) => response.json())
-   .then((data) => {
-    return data.bookings;
-   })
-   .catch((err) => console.log(err.message));
-  return bookingsData;
+ export const getBookingsData = () => {
+   return fetch(`${rootURL}bookings/bookings`)
+     .then(response => response.json())
  }
-
 
  postNewBooking(newBooking) {
   fetch(`${rootURL}bookings/bookings`, {
@@ -50,5 +44,3 @@ const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
    })
    .catch((err) => console.log(err));
  }
-
-export default API
