@@ -1,35 +1,15 @@
 const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
 
-    //  needs to be changed to async
-
- fetchData() {
-  let userData = this.getUserData();
-  let roomsData = this.getRoomsData();
-  let bookingsData = this.getBookingsData();
-
-  return Promise.all([userData, roomsData, bookingsData]).then((data) => {
-   let allData = {};
-   allData.userData = data[0];
-   allData.roomsData = data[1];
-   allData.bookingsData = data[2];
-   return allData;
-  });
- }
-
+ // should we consider using promise.race instead?
 
  export const getUserData = () => {
    return fetch(`${rootURL}users/users`)
      .then(response => response.json())
  }
 
- getRoomsData() {
-  let roomsData = fetch(`${rootURL}rooms/rooms`)
-   .then((response) => response.json())
-   .then((data) => {
-    return data.rooms;
-   })
-   .catch((err) => console.log(err.message));
-  return roomsData;
+ export const getRoomsData = () => {
+   return fetch(`${rootURL}rooms/rooms`)
+     .then(response => response.json())
  }
 
  getBookingsData() {
