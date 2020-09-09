@@ -23,6 +23,9 @@ class App extends Component {
     await getUserData() 
       .then(data => this.setState({users: data}))
       .catch((err) => console.log(err.message));
+    await getRoomsData()
+      .then(data => this.setState({rooms: data}))
+      .catch((err) => console.log(err.message));
   //   try {
   //     const data = CleanData.getData()
 
