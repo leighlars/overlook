@@ -7,9 +7,11 @@ const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
      .then(response => response.json())
  }
 
-// export const getUserDataById = (userId) => {
-//   return fetch(`${rootUrl}users/${userId}`)
-// }
+export const getUserDataById = (userId) => {
+  return fetch(`${rootUrl}users/${userId}`)
+  .then(response => {response.json()})
+}
+
  export const getRoomsData = () => {
    return fetch(`${rootURL}rooms/rooms`)
      .then(response => response.json())
