@@ -27,7 +27,7 @@ app.get('/api/v1/users/:id', (req, resp) => {
 
   const getUserById = app.locals.users.find(user => user.id === +id)
   resp.status(200).json(getUserById);
-})
+}) // should this be a post that checks the password stored for a user? How it was set up in rotten tomatillos
 
 app.get('/api/v1/bookings', (req, resp) => {
   resp.status(200).json(app.locals.bookings);
