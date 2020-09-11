@@ -26,8 +26,16 @@ app.get('/api/v1/users/:id', (req, resp) => {
   const { id } = req.params;
 
   const getUserById = app.locals.users.find(user => user.id === +id)
-  resp.status(200).json(getUserById);
-}) // should this be a post that checks the password stored for a user? How it was set up in rotten tomatillos
+  if (getUserById) {
+    resp.status(200).json(getUserById);
+  }
+  else {
+    response.status(404).json({
+      errorMessage: `Could not get user's data, no user with id: ${id} found`
+    })
+  }
+}) // should this be a post that checks the password stored for a user?
+// tomatillos was set up as a post
 
 app.get('/api/v1/bookings', (req, resp) => {
   resp.status(200).json(app.locals.bookings);
@@ -37,7 +45,14 @@ app.get('/api/v1/bookings/:id', (req, resp) => {
   const { id } = req.params;
 
   const getBookingById = app.locals.bookings.find(booking => booking.id === id)
-  resp.status(200).json(getBookingById);
+  if (getBookingById) {
+    resp.status(200).json(getBookingById);
+  }
+  else {
+    response.status(404).json({
+      errorMessage: `Could not get booking's data, no booking with id: ${id} found`
+    })
+  }
 })
 
 app.post('/api/v1/bookings', (req, resp) => {
