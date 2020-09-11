@@ -25,7 +25,7 @@ app.get('/api/v1/users', (req, resp) => {
 app.get('/api/v1/users/:id', (req, resp) => {
   const { id } = req.params;
 
-  const getUserById = app.locals.users.filter(user => user.id === +id)
+  const getUserById = app.locals.users.find(user => user.id === +id)
   resp.status(200).json(getUserById);
 })
 
@@ -36,7 +36,7 @@ app.get('/api/v1/bookings', (req, resp) => {
 app.get('/api/v1/bookings/:id', (req, resp) => {
   const { id } = req.params;
 
-  const getBookingById = app.locals.bookings.filter(booking => booking.id === +id)
+  const getBookingById = app.locals.bookings.find(booking => booking.id === id)
   resp.status(200).json(getBookingById);
 })
 
@@ -55,7 +55,7 @@ app.post('/api/v1/bookings', (req, resp) => {
     id: Date.now()
   }
 
-  app.locals.whitewater.push(newBooking);
+  app.locals.bookings.push(newBooking);
   return resp
     .status(201)
     .json({ booking: newBooking});
