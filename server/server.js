@@ -30,7 +30,7 @@ app.get('/api/v1/users/:id', (req, resp) => {
     resp.status(200).json(getUserById);
   }
   else {
-    response.status(404).json({
+    return resp.status(404).json({
       errorMessage: `Could not get user's data, no user with id: ${id} found`
     })
   }
@@ -49,7 +49,7 @@ app.get('/api/v1/bookings/:id', (req, resp) => {
     resp.status(200).json(getBookingById);
   }
   else {
-    response.status(404).json({
+    resp.status(404).json({
       errorMessage: `Could not get booking's data, no booking with id: ${id} found`
     })
   }
