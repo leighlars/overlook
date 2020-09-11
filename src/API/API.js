@@ -8,9 +8,9 @@ const rootURL = "https://fe-apps.herokuapp.com/api/v1/overlook/1904/";
  }
 
 export const getUserDataById = (userId) => {
-  return fetch(`${rootUrl}users/${userId}`)
+  return fetch(`${rootURL}users/${userId}`)
   .then(response => {response.json()})
-}
+} // returns user single object
 
  export const getRoomsData = () => {
    return fetch(`${rootURL}rooms/rooms`)
@@ -21,6 +21,10 @@ export const getUserDataById = (userId) => {
    return fetch(`${rootURL}bookings/bookings`)
      .then(response => response.json())
  }
+
+ export const getBookingDataById = (bookingId) => {
+   return fetch(`${rootURL}bookings/${bookingId}`)
+ } //returns single booking object
 
  export const postNewBooking = (newBooking) => {
    fetch(`${rootURL}bookings/bookings`, {
