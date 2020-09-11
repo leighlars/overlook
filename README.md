@@ -3,7 +3,7 @@ Remake of Mod 2 Project in React
 
 - [Leigh Larson](https://github.com/leighlars)
 - [Josh Sevy]
-- [Jordy Shryock]
+- [Jordy Shryock](https://github.com/jordy1611)
 - [Steph Norton]
 - [Aaron Burris-DeBoskey]
 - [Amy Karnaze]
